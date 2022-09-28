@@ -1,0 +1,22 @@
+kind: Produkt
+id: f78e8f5d-6998-47dd-9962-8acc1ecda118
+name: terraform-fakewebservices-vm
+category: tbd
+description: Produkt HighlyAvailableService - 2 VMs mit vorgeschaltetem Loadbalancer
+owner: xgadlnd
+capability: tbd
+state: planned
+type: Terraform
+contains:
+  - name: HA_SERVICE
+    vers: "1.0.0"
+    repo_url: "app.terraform.io/team-automation/higlyAvailableService/tfdp"
+    vars:
+      vm_type: "{{inputs.vm_type}}"
+  - inputs:
+    vm_type: String
+  - outputs:
+    lb_id: "{{LB.lb_id}}"
+
+
+
